@@ -1,4 +1,4 @@
-package org.example.conroller;
+package org.example.controller;
 
 import org.example.dto.invoice.InvoiceCreateDTO;
 import org.example.exception.InvoiceNotFoundException;
