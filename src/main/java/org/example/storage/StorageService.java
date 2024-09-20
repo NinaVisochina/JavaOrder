@@ -10,6 +10,7 @@ public interface StorageService {
     String save(MultipartFile file) throws IOException;
 
     String saveImage(MultipartFile file, FileSaveFormat format) throws IOException;
+    String saveImage(String fileUrl, FileSaveFormat format) throws IOException;
 
 }
 
