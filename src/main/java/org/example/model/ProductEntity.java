@@ -1,7 +1,9 @@
 package org.example.model;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -14,7 +16,7 @@ import java.util.List;
 public class ProductEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id; // Змінено на Integer
 
     @Column(length = 200, nullable = false)
     private String name;
@@ -37,6 +39,4 @@ public class ProductEntity {
 
     @OneToMany(mappedBy = "product",cascade = CascadeType.ALL)
     private List<ProductImageEntity> productImages;
-
 }
-
